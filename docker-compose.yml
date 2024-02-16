@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    image: bdn_ruby:1.0
+    container_name: bdn_ruby_1_0
+    command: ./bin/rails server -b 0.0.0.0
+    volumes:
+      - .:/bdn
+    ports:
+      - "3000:3000"

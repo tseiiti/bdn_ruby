@@ -1,0 +1,17 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: dockerfile.primeiro
+    image: bdn_ruby_slim:1.0
+    container_name: bdn_ruby_slim_1_0
+    command: ./bin/rails server -b 0.0.0.0
+    volumes:
+      - .:/bdn
+    environment:
+      - RAILS_ENV=production
+      - RAILS_MASTER_KEY=1793c17dcd48f299e4991ef50523f3ba
+      - SECRET_KEY_BASE=production_secret_key_base
+      # - ASSET_HOST=http://localhost:3000/
+    ports:
+      - "3000:3000
