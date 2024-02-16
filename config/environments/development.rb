@@ -75,6 +75,7 @@ Rails.application.configure do
   config.action_controller.raise_on_missing_callback_actions = true
 
   config.hosts = [
-    /.*\.b4a\.run/
+    /.*\.b4a\.run/, 
+    /.*localhost.*/
   ]
 end
